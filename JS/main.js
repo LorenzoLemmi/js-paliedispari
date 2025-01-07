@@ -29,3 +29,7 @@ function sumOfNumbers (num1, num2) {
 
 // Prompt per l'utente per scegliere pari o dispari
 let inputEvenOrOdd = prompt("Inserisci <Pari> o <Dispari>").toLowerCase();
+
+// Prompt per l'utente per inserire un numero da 1 a 5
+inputNumber = prompt("Inserisci un numero da 1 a 5");
+
