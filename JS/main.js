@@ -13,3 +13,13 @@ if (isWordPalindrome(inputWord)) {
     } else { 
     alert("La parola non è palindroma.") 
 }
+
+
+
+// Funzione per generare un numero casuale tra 1 e 5
+function randomNumber (min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+}
+const selectedRandomNumber = randomNumber (1, 5);
+
+
