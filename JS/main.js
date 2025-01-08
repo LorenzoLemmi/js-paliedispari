@@ -1,4 +1,4 @@
-//Prompt per chiedere all’utente di inserire una parola
+//Prompt to ask the user to enter a word
 let inputWord = prompt("Inserisci una parola per verificare se è palindroma:");
 while ((!isNaN(inputWord)) || (inputWord.length == 0) || (inputWord.includes(" ") === true)) {
     inputWord = prompt("Inserisci una parola per verificare se è palindroma:");
@@ -7,13 +7,13 @@ while ((!isNaN(inputWord)) || (inputWord.length == 0) || (inputWord.includes(" "
     }
 }
 
-//Funzione per rendere minuscole le lettere della parola e confrontarla con la parola formata invertendo l'ordine delle lettere
+//Function to lowercase the letters of the word and compare it with the word formed by reversing the order of the letters
 function isWordPalindrome(word) {
     word = word.toLowerCase()
     return word === word.split("").reverse().join("");
 }
 
-//Dichiarazione del risultato
+//Result declaration
 if (isWordPalindrome(inputWord)) { 
     alert("La parola è palindroma") 
     } else { 
@@ -22,18 +22,18 @@ if (isWordPalindrome(inputWord)) {
 
 
 
-// Funzione per generare un numero casuale tra 1 e 5
+// Function to generate a random number between 1 and 5
 function randomNumber (min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
 const selectedRandomNumber = randomNumber (1, 5);
 
-// Funzione per determinare se un numero è pari o dispari
+// Function to determine if a number is even or odd
 function sumOfNumbers (num1, num2) {
     return (num1 + num2) % 2 == 0;
 }
 
-// Prompt per l'utente per scegliere pari o dispari
+// Prompt for user to choose even or odd
 let inputEvenOrOdd;
 
 while ((inputEvenOrOdd !== "pari" || inputEvenOrOdd !== "dispari")) {
@@ -43,7 +43,7 @@ while ((inputEvenOrOdd !== "pari" || inputEvenOrOdd !== "dispari")) {
     }
 }
 
-// Prompt per l'utente per inserire un numero da 1 a 5
+// Prompt the user to enter a number from 1 to 5
 let inputNumber = prompt("Inserisci un numero da 1 a 5");
 
 while ((inputNumber > 5 || inputNumber < 1) || (isNaN(inputNumber))) {
@@ -53,10 +53,10 @@ while ((inputNumber > 5 || inputNumber < 1) || (isNaN(inputNumber))) {
     }
 }
 
-// Verifica se la somma del numero inserito dall'utente e del numero random corrisponde a un numero pari
+// Check if the sum of the number entered by the user and the random number is an even number
 const sumEvenOrOdd = (inputNumber + selectedRandomNumber) % 2 == 0;
 
-//Confronto tra scelta dell'utente (pari o dispari) e del numero risultante dalla somma
+//Comparison between the user's choice (even or odd) and the number resulting from the sum
 let winOrLoss;
 
 if (sumEvenOrOdd === true && inputEvenOrOdd == "pari") {
