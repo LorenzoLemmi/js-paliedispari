@@ -1,5 +1,11 @@
 //Prompt per chiedere all’utente di inserire una parola
 let inputWord = prompt("Inserisci una parola per verificare se è palindroma:");
+while ((!isNaN(inputWord)) || (inputWord.length == 0) || (inputWord.includes(" ") === true)) {
+    inputWord = prompt("Inserisci una parola per verificare se è palindroma:");
+    if ((isNaN(inputWord)) && (inputWord.length !== 0) && (inputWord.includes(" ") === false)) {
+        break;
+    }
+}
 
 //Funzione per rendere minuscole le lettere della parola e confrontarla con la parola formata invertendo l'ordine delle lettere
 function isWordPalindrome(word) {
