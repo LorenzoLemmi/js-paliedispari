@@ -48,6 +48,15 @@ while ((inputNumber > 5 || inputNumber < 1)) {
 }
 
 // Verifica se la somma del numero inserito dall'utente e del numero random corrisponde a un numero pari
-const sumOfNumbers = (inputNumber + selectedRandomNumber) % 2 == 0;
+const sumEvenOrOdd = (inputNumber + selectedRandomNumber) % 2 == 0;
 
+//Confronto tra scelta dell'utente (pari o dispari) e del numero risultante dalla somma
+let winOrLoss;
 
+if (sumEvenOrOdd === true && inputEvenOrOdd == "pari") {
+    winOrLoss = alert("Hai vinto!")
+} else if (sumEvenOrOdd === false && inputEvenOrOdd == "dispari") {
+    winOrLoss = alert("Hai vinto!")
+} else {
+    winOrLoss = alert("Hai perso!")
+}
