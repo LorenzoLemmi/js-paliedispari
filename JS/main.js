@@ -1,7 +1,7 @@
-//Chiedere all’utente di inserire una parola
+//Prompt per chiedere all’utente di inserire una parola
 let inputWord = prompt("Inserisci una parola per verificare se è palindroma:");
 
-//Rendere minuscole le lettere della parola e confrontarla con la parola formata invertendo l'ordine delle lettere
+//Funzione per rendere minuscole le lettere della parola e confrontarla con la parola formata invertendo l'ordine delle lettere
 function isWordPalindrome(word) {
     word = word.toLowerCase()
     return word === word.split("").reverse().join("");
@@ -28,8 +28,21 @@ function sumOfNumbers (num1, num2) {
 }
 
 // Prompt per l'utente per scegliere pari o dispari
-let inputEvenOrOdd = prompt("Inserisci <Pari> o <Dispari>").toLowerCase();
+let inputEvenOrOdd;
+
+while ((inputEvenOrOdd !== "pari" || inputEvenOrOdd !== "dispari")) {
+    inputEvenOrOdd = prompt("Inserisci <Pari> o <Dispari>").toLowerCase();
+    if (inputEvenOrOdd == "pari" || inputEvenOrOdd == "dispari") {
+        break;
+    }
+}
 
 // Prompt per l'utente per inserire un numero da 1 a 5
-inputNumber = prompt("Inserisci un numero da 1 a 5");
+let inputNumber = prompt("Inserisci un numero da 1 a 5");
 
+while ((inputNumber > 5 || inputNumber < 1)) {
+    inputNumber = prompt("Inserisci un numero da 1 a 5");
+    if (inputNumber < 6 && inputNumber > 0) {
+        break;
+    }
+}
