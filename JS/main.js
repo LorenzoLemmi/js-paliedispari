@@ -46,3 +46,8 @@ while ((inputNumber > 5 || inputNumber < 1)) {
         break;
     }
 }
+
+// Verifica se la somma del numero inserito dall'utente e del numero random corrisponde a un numero pari
+const sumOfNumbers = (inputNumber + selectedRandomNumber) % 2 == 0;
+
+
