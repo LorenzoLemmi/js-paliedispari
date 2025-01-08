@@ -40,7 +40,7 @@ while ((inputEvenOrOdd !== "pari" || inputEvenOrOdd !== "dispari")) {
 // Prompt per l'utente per inserire un numero da 1 a 5
 let inputNumber = prompt("Inserisci un numero da 1 a 5");
 
-while ((inputNumber > 5 || inputNumber < 1)) {
+while ((inputNumber > 5 || inputNumber < 1) || (isNaN(inputNumber))) {
     inputNumber = prompt("Inserisci un numero da 1 a 5");
     if (inputNumber < 6 && inputNumber > 0) {
         break;
