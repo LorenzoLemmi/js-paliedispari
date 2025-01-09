@@ -10,17 +10,28 @@
 
     <main class="container">
 
-        <form class="pt-3">
+        <section class="row py-3 my-3 bg-success rounded border-black opacity-75 shadow">
 
-            <div class="mb-3">
-                <label for="exampleTextInput" class="form-label">Inserisci una parola per verificare se è palindroma:</label>
-                <input type="text" class="form-control" id="inputWord">
+            <div class="col-6">
+                <form>
+
+                    <div class="mb-3">
+                        <label for="exampleTextInput" class="form-label fw-bold text-light">INSERISCI UNA PAROLA PER VERIFICARE SE E' PALINDROMA:</label>
+                        <input type="text" class="form-control border-black shadow" id="inputWord">
+                    </div>
+                    
+                    <button type="submit" id="submitButtonPalindrome" class="btn btn-light fw-bold border-black">Conferma</button>
+                    
+                </form>
             </div>
-            
-            <button type="submit" id="submitButtonPalindrome" class="btn btn-primary">Conferma</button>
-            
-        </form>
 
+            <div class="d-flex justify-content-center align-items-center col-6">
+                
+                <h1 id = "resultPalindromeSpace" class="text-light border-black"></h1>
+                
+            </div>
+
+        </section>
 
     </main>
 

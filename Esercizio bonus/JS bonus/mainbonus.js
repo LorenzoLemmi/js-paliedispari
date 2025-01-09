@@ -8,6 +8,7 @@ function isWordPalindrome(word) {
 //End
 
 const submitButtonPalindrome = document.querySelector("#submitButtonPalindrome");
+let resultPalindromeSpace = document.querySelector("#resultPalindromeSpace");
 
 submitButtonPalindrome.addEventListener("click", function(event) {
 
@@ -24,9 +25,9 @@ submitButtonPalindrome.addEventListener("click", function(event) {
             //Result declaration
             const resultPalindrome = isWordPalindrome(inputWord);
             if (resultPalindrome === true) { 
-                alert("La parola è palindroma") 
+                resultPalindromeSpace.innerHTML = `LA PAROLA E' PALINDROMA`;
                 } else { 
-                alert("La parola non è palindroma.") 
+                resultPalindromeSpace.innerHTML = `LA PAROLA NON E' PALINDROMA`;
             }
             //End
  
