@@ -7,10 +7,9 @@ function isWordPalindrome(word) {
 }
 //End
 
+const submitButtonPalindrome = document.querySelector("#submitButtonPalindrome");
 
+submitButtonPalindrome.addEventListener("click", function(event) {
 
-    
-
-
-
-
+    event.preventDefault ();
+    const inputWord = document.querySelector("#inputWord").value.trim();
