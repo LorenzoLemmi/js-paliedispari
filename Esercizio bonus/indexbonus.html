@@ -10,25 +10,62 @@
 
     <main class="container">
 
-        <section class="row py-3 my-3 bg-success rounded border-black opacity-75 shadow">
+        <section class="row py-3 my-3 bg-success rounded opacity-75 shadow text-center">
 
-            <div class="col-6">
+            <div class="col-6 d-flex justify-content-center">
                 <form>
 
                     <div class="mb-3">
-                        <label for="exampleTextInput" class="form-label fw-bold text-light">INSERISCI UNA PAROLA PER VERIFICARE SE E' PALINDROMA:</label>
+                        <label for="exampleTextInput" class="form-label fw-bold text-light">INSERISCI UNA PAROLA PER VERIFICARE SE E' PALINDROMA</label>
                         <input type="text" class="form-control border-black shadow" id="inputWord">
                     </div>
                     
-                    <button type="submit" id="submitButtonPalindrome" class="btn btn-light fw-bold border-black">Conferma</button>
-                    
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" id="submitButtonPalindrome" class="btn btn-dark fw-bold border-black">Conferma</button>
+                    </div>
+
                 </form>
             </div>
 
             <div class="d-flex justify-content-center align-items-center col-6">
-                
                 <h1 id = "resultPalindromeSpace" class="text-light border-black"></h1>
-                
+            </div>
+
+        </section>
+
+        <section class="row my-3 py-3 bg-success rounded opacity-75 shadow text-center">
+
+            <div class="col-8">
+
+                <div class="row container d-flex justify-content-center">
+
+                    <div class="col-6">
+                        <label for="basic-url" class="form-label fw-bold text-light">SCEGLI <span class="text-decoration-underline">VERO</span> O <span class="text-decoration-underline">FALSO</span></label>
+                        <select class="form-select border-black" aria-label="Default select example">
+                            <option selected>Choose</option>
+                            <option value="1">Vero</option>
+                            <option value="2">Falso</option>
+                          </select>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="basic-url" class="form-label fw-bold text-light">INSERISCI UN NUMERO DA 1 A 5</label>
+                        <input type="text" class="form-control border-black">
+                    </div>
+                </div>
+
+                <div class="row pt-3 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-dark fw-bold border-black w-25">Conferma</button>
+                </div>
+
+            </div>
+
+            <div class="col-4">
+
+                <div class="class = d-flex justify-content-center align-items-center">
+                    <h1 class="text-light"></h1>
+                </div>
+
             </div>
 
         </section>
