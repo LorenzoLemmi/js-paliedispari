@@ -18,16 +18,16 @@ submitButtonPalindrome.addEventListener("click", function(event) {
     //Acceptance conditions
     if ((!isNaN(inputWord)) || (inputWord.length == 0) || (inputWord.includes(" ") === true)) {
 
-            alert("Inserisci una parola valida per verificare se è palindroma");
+            alert("Inserisci una parola valida!");
 
         } else if ((isNaN(inputWord)) && (inputWord.length !== 0) && (inputWord.includes(" ") === false)) {
 
             //Result declaration
             const resultPalindrome = isWordPalindrome(inputWord);
             if (resultPalindrome === true) { 
-                resultPalindromeSpace.innerHTML = `LA PAROLA E' PALINDROMA`;
+                resultPalindromeSpace.innerHTML = `PALINDROMA &#x1F389;`;
                 } else { 
-                resultPalindromeSpace.innerHTML = `LA PAROLA NON E' PALINDROMA`;
+                resultPalindromeSpace.innerHTML = `NON PALINDROMA &#x1F645;`;
             }
             //End
  
