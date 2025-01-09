@@ -13,3 +13,25 @@ submitButtonPalindrome.addEventListener("click", function(event) {
 
     event.preventDefault ();
     const inputWord = document.querySelector("#inputWord").value.trim();
+
+    //Acceptance conditions
+    if ((!isNaN(inputWord)) || (inputWord.length == 0) || (inputWord.includes(" ") === true)) {
+
+            alert("Inserisci una parola valida per verificare se è palindroma");
+
+        } else if ((isNaN(inputWord)) && (inputWord.length !== 0) && (inputWord.includes(" ") === false)) {
+
+            //Result declaration
+            const resultPalindrome = isWordPalindrome(inputWord);
+            if (resultPalindrome === true) { 
+                alert("La parola è palindroma") 
+                } else { 
+                alert("La parola non è palindroma.") 
+            }
+            //End
+ 
+    }
+    //End
+})
+
+    
