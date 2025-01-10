@@ -62,28 +62,28 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
     event.preventDefault ();
 
     const selectedRandomNumber = randomNumber (1, 5);
-    const inputEvenOrOdd = document.querySelector("#inputEvenOrOdd").value.toLowerCase.trim();
+    const inputEvenOrOdd = document.querySelector("#inputEvenOrOdd").value.toLowerCase().trim();
     const inputNumber = document.querySelector("#inputNumber").value.trim();
 
     //Acceptance conditions
-    if (inputEvenOrOdd !== "pari" ||inputEvenOrOdd !== "dispari") {
+    if (inputEvenOrOdd !== "pari" && inputEvenOrOdd !== "dispari") {
         
             alert("Inserisci <Pari> o <Dispari>");
 
-        } else if ((inputNumber > 5 || inputNumber < 1) || (isNaN(inputNumber))) {
+        } else if ((inputNumber < 1 || inputNumber > 5) || (isNaN(inputNumber))) {
 
             alert("Inserisci un numero valido");
 
-        } else if (inputNumber < 6 && inputNumber > 0) {
+        } else {
 
             //Result declaration
             const sumEvenOrOdd = sumOfNumbers(selectedRandomNumber, inputNumber);
 
-            if (sumEvenOrOdd === true && (inputEvenOrOdd === "Pari")) {
+            if (sumEvenOrOdd === true && (inputEvenOrOdd == "pari")) {
 
                     resultWinOrLossSpace.innerHTML = `HAI VINTO! &#127882;`;
 
-                } else if (sumEvenOrOdd === false && (inputEvenOrOdd === "Dispari")) {
+                } else if (sumEvenOrOdd === false && (inputEvenOrOdd == "dispari")) {
 
                     resultWinOrLossSpace.innerHTML = `HAI VINTO! &#127882;`;
 
