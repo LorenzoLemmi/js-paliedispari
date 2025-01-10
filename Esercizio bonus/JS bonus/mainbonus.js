@@ -41,17 +41,28 @@ submitButtonPalindrome.addEventListener("click", function(event) {
     
 
 
-// Function to generate a random number between 1 and 5
+//Function to generate a random number between 1 and 5
 function randomNumber (min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
 //End
 
-// Function to determine if sum is even or odd
+//Function to determine if sum is even or odd
 function sumOfNumbers (num1, num2) {
     return (num1 + num2) % 2 == 0;
 }
 //End
+
+//Function to add new result to history
+function addResultToTop(resultText) { 
+    const historySpace = document.querySelector("#historySpace");
+    const newResult = document.createElement("li");
+    newResult.innerHTML = resultText;
+    historySpace.insertBefore(newResult, historySpace.firstChild); 
+}
+//End
+
+
 
 const submitButtonEvenOrOdd = document.querySelector("#submitButtonEvenOrOdd");
 let resultWinOrLossSpace = document.querySelector("#resultWinOrLossSpace");
@@ -79,11 +90,11 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
             //Result declaration
             const sumEvenOrOdd = sumOfNumbers(selectedRandomNumber, inputNumber);
 
-            if (sumEvenOrOdd === true && (inputEvenOrOdd == "pari")) {
+            if (sumEvenOrOdd === true && inputEvenOrOdd == "pari") {
 
                     resultWinOrLossSpace.innerHTML = `HAI VINTO! &#127882;`;
 
-                } else if (sumEvenOrOdd === false && (inputEvenOrOdd == "dispari")) {
+                } else if (sumEvenOrOdd === false && inputEvenOrOdd == "dispari") {
 
                     resultWinOrLossSpace.innerHTML = `HAI VINTO! &#127882;`;
 
@@ -91,8 +102,9 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
 
                     resultWinOrLossSpace.innerHTML = `HAI PERSO! &#128557;`;
             }
-            //End
 
+            return addResultToTop(resultWinOrLossSpace.innerHTML)
+            //End
     }
 })
 //End
