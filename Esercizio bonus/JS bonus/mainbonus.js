@@ -109,11 +109,15 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
 })
 //End
 
-
+//Clear history input behavior
 const buttonClearHistory = document.querySelector("#buttonClearHistory");
 
 buttonClearHistory.addEventListener("click", function(clear) {
 
     clear.preventDefault()
-
+    const history = document.querySelectorAll("li");
+    for (let i = 0; i < history.length; i++) {
+        history[i].remove();
+    }
 })
+//End
