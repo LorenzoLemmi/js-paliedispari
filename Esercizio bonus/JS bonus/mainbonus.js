@@ -65,7 +65,7 @@ function addResultToTop(resultText) {
 
 
 const submitButtonEvenOrOdd = document.querySelector("#submitButtonEvenOrOdd");
-let resultWinOrLossSpace = document.querySelector("#resultWinOrLossSpace");
+const resultWinOrLossSpace = document.querySelector("#resultWinOrLossSpace");
 
 //Even or odd input behavior
 submitButtonEvenOrOdd.addEventListener("click", function(event) {
@@ -108,3 +108,12 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
     }
 })
 //End
+
+
+const buttonClearHistory = document.querySelector("#buttonClearHistory");
+
+buttonClearHistory.addEventListener("click", function(clear) {
+
+    clear.preventDefault()
+
+})
