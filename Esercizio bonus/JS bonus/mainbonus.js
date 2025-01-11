@@ -1,4 +1,4 @@
-
+//PALINDROME WORD
 
 //Function to lowercase the letters of the word and compare it with the word formed by reversing the order of the letters
 function isWordPalindrome(word) {
@@ -38,7 +38,7 @@ submitButtonPalindrome.addEventListener("click", function(event) {
 //End
 
 
-    
+//EVEN OR ODD GAME
 
 
 //Function to generate a random number between 1 and 5
@@ -49,7 +49,7 @@ function randomNumber (min, max) {
 
 //Function to determine if sum is even or odd
 function sumOfNumbers (num1, num2) {
-    return (num1 + num2) % 2 == 0;
+    return (Number(num1) + Number(num2)) % 2 == 0;
 }
 //End
 
@@ -73,8 +73,11 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
     event.preventDefault ();
 
     const selectedRandomNumber = randomNumber (1, 5);
+    console.log(selectedRandomNumber);
     const inputEvenOrOdd = document.querySelector("#inputEvenOrOdd").value.toLowerCase().trim();
+    console.log(inputEvenOrOdd);
     const inputNumber = document.querySelector("#inputNumber").value.trim();
+    console.log(inputNumber);
 
     //Acceptance conditions
     if (inputEvenOrOdd !== "pari" && inputEvenOrOdd !== "dispari") {
@@ -89,6 +92,7 @@ submitButtonEvenOrOdd.addEventListener("click", function(event) {
 
             //Result declaration
             const sumEvenOrOdd = sumOfNumbers(selectedRandomNumber, inputNumber);
+            console.log(sumEvenOrOdd);
 
             if (sumEvenOrOdd === true && inputEvenOrOdd == "pari") {
 
